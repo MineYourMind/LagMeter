@@ -1254,7 +1254,7 @@ public class LagMeter extends JavaPlugin{
 				while(looped++ <= 20){
 					lagMeter.append("_");
 				}
-				this.sendMessage(sender, Severity.INFO, ChatColor.GOLD + "[" + (tps >= 18 ? ChatColor.GREEN : tps >= 15 ? ChatColor.YELLOW : ChatColor.RED) + lagMeter.toString() + ChatColor.GOLD + "] " + String.format("%3.2f", tps) + " TPS");
+				this.sendMessage(sender, Severity.INFO, ChatColor.GOLD + "[" + (tps >= 16 ? ChatColor.GREEN : tps >= 10 ? ChatColor.YELLOW : ChatColor.RED) + lagMeter.toString() + ChatColor.GOLD + "] " + String.format("%3.2f", tps) + " TPS");
 			}
 		}catch(NoAvailableTPSException e){
 			this.sendMessage(sender, Severity.WARNING, e.getMessage());
